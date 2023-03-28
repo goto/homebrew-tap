@@ -5,23 +5,23 @@
 class Dex < Formula
   desc "Infrastructure orchestration tool."
   homepage "https://github.com/goto/dex"
-  version "0.5.1"
+  version "0.5.2"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/goto/dex/releases/download/v0.5.1/dex_0.5.1_macos_arm64.tar.gz"
-      sha256 "771e0fa3cefbd0a89fdfd6e657e72c320fd4116063986b1f48a41d978d293ff6"
+      url "https://github.com/goto/dex/releases/download/v0.5.2/dex_0.5.2_macos_arm64.tar.gz"
+      sha256 "61fc426c531ab7affdef1d5e3197bf1b3dc5615ec2811ec34a59e6fc0e726c65"
 
       def install
         bin.install "dex"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/dex/releases/download/v0.5.1/dex_0.5.1_macos_x86_64.tar.gz"
-      sha256 "1fda5a111d3461fbf4510b63bdc209a3d92195a2eeefaf72f2c830dc3c76edf5"
+      url "https://github.com/goto/dex/releases/download/v0.5.2/dex_0.5.2_macos_x86_64.tar.gz"
+      sha256 "faeb95fafb3d4e1e8900da1205f36d878f7f36ef54cc01a13605675105c71cfa"
 
       def install
         bin.install "dex"
@@ -31,16 +31,16 @@ class Dex < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/dex/releases/download/v0.5.1/dex_0.5.1_linux_arm64.tar.gz"
-      sha256 "ce7364d520f572cab7abe7be7058814d1d333ac4dcf94a9b931c3fc856cc9740"
+      url "https://github.com/goto/dex/releases/download/v0.5.2/dex_0.5.2_linux_arm64.tar.gz"
+      sha256 "85f83d183b7c792fe56eea292a1070b48866e81e71e7dbb11c0801c7cf297f25"
 
       def install
         bin.install "dex"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/dex/releases/download/v0.5.1/dex_0.5.1_linux_x86_64.tar.gz"
-      sha256 "45c2809e19fff891d006115f8b0ef2513bdc0cfce3b1b0ee6df4062504225ab0"
+      url "https://github.com/goto/dex/releases/download/v0.5.2/dex_0.5.2_linux_x86_64.tar.gz"
+      sha256 "87ba32fd0a9e3cad8de51a907f4a773fa1ebf494a8557a688c1c563397ed037f"
 
       def install
         bin.install "dex"
