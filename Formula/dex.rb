@@ -5,23 +5,23 @@
 class Dex < Formula
   desc "Infrastructure orchestration tool."
   homepage "https://github.com/goto/dex"
-  version "0.5.2"
+  version "0.5.3"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/goto/dex/releases/download/v0.5.2/dex_0.5.2_macos_arm64.tar.gz"
-      sha256 "61fc426c531ab7affdef1d5e3197bf1b3dc5615ec2811ec34a59e6fc0e726c65"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/dex/releases/download/v0.5.3/dex_0.5.3_macos_x86_64.tar.gz"
+      sha256 "c6bd87e0893a7b7a7e883ceaaf591a94051bb6b145b2199824a784e6771cde5b"
 
       def install
         bin.install "dex"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/dex/releases/download/v0.5.2/dex_0.5.2_macos_x86_64.tar.gz"
-      sha256 "faeb95fafb3d4e1e8900da1205f36d878f7f36ef54cc01a13605675105c71cfa"
+    if Hardware::CPU.arm?
+      url "https://github.com/goto/dex/releases/download/v0.5.3/dex_0.5.3_macos_arm64.tar.gz"
+      sha256 "5bb6a685f53737560cb289f31b12fb576af1743d9339dd624c631f848351c311"
 
       def install
         bin.install "dex"
@@ -31,16 +31,16 @@ class Dex < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/dex/releases/download/v0.5.2/dex_0.5.2_linux_arm64.tar.gz"
-      sha256 "85f83d183b7c792fe56eea292a1070b48866e81e71e7dbb11c0801c7cf297f25"
+      url "https://github.com/goto/dex/releases/download/v0.5.3/dex_0.5.3_linux_arm64.tar.gz"
+      sha256 "d759e10b45f1a1cc87c404b7fbfaa5785c08a64f3ff0f4b8ced5c512e8284687"
 
       def install
         bin.install "dex"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/dex/releases/download/v0.5.2/dex_0.5.2_linux_x86_64.tar.gz"
-      sha256 "87ba32fd0a9e3cad8de51a907f4a773fa1ebf494a8557a688c1c563397ed037f"
+      url "https://github.com/goto/dex/releases/download/v0.5.3/dex_0.5.3_linux_x86_64.tar.gz"
+      sha256 "b836677a248f5b980641cc427ddd65981cbb5934474f39ddd582960560d44458"
 
       def install
         bin.install "dex"
