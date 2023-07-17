@@ -5,23 +5,23 @@
 class Entropy < Formula
   desc "Infrastructure orchestration tool."
   homepage "https://github.com/goto/entropy"
-  version "0.7.1"
+  version "0.7.2"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/goto/entropy/releases/download/v0.7.1/entropy_0.7.1_macos_arm64.tar.gz"
-      sha256 "3a31155b1ce153952e6a983a7cf448de3748048e5687cac3b819cc930d8da2f4"
+      url "https://github.com/goto/entropy/releases/download/v0.7.2/entropy_0.7.2_macos_arm64.tar.gz"
+      sha256 "a6926a41b2c485154868fbd6fb5f94d77af5f9f63be7fa407a03a24144018ed9"
 
       def install
         bin.install "entropy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.7.1/entropy_0.7.1_macos_x86_64.tar.gz"
-      sha256 "fc97865cbe5f9efe5d1af298e40d015f9e34ec2d4e6096c14398761ded3b22c7"
+      url "https://github.com/goto/entropy/releases/download/v0.7.2/entropy_0.7.2_macos_x86_64.tar.gz"
+      sha256 "cde67af7b6e781930d1674de2b0e0c93be2cc99d550c910099e650e6c265bdfb"
 
       def install
         bin.install "entropy"
@@ -31,16 +31,16 @@ class Entropy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/entropy/releases/download/v0.7.1/entropy_0.7.1_linux_arm64.tar.gz"
-      sha256 "114922814e6c1fdae800c5a38e14efb328760196389020465c8e3e246311d268"
+      url "https://github.com/goto/entropy/releases/download/v0.7.2/entropy_0.7.2_linux_arm64.tar.gz"
+      sha256 "2bc0161e9b0d8460c8bebfdd2f29e88af19bafdcbbe06e95cc59b862285b5bc0"
 
       def install
         bin.install "entropy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.7.1/entropy_0.7.1_linux_x86_64.tar.gz"
-      sha256 "5c4e97c0256db8034db9e2c8a0b24dd120a3ef7b1808751e5d668115b6c54597"
+      url "https://github.com/goto/entropy/releases/download/v0.7.2/entropy_0.7.2_linux_x86_64.tar.gz"
+      sha256 "c2ee93aa081cd5117a3a030f927237c99473ffc04bcf28f2fe832583a8e862e4"
 
       def install
         bin.install "entropy"
