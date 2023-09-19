@@ -5,23 +5,23 @@
 class Dex < Formula
   desc "Infrastructure orchestration tool."
   homepage "https://github.com/goto/dex"
-  version "0.7.13"
+  version "0.7.14"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/goto/dex/releases/download/v0.7.13/dex_Darwin_amd64.tar.gz"
-      sha256 "e6efcb196c3981e8683b882e2e27e656f3e05e8ac51ede41ee23d9c155075079"
+      url "https://github.com/goto/dex/releases/download/v0.7.14/dex_Darwin_amd64.tar.gz"
+      sha256 "74c1ed19b628e1338abc6715317e06f09298454a24538f80ccb0c1eb8ef29549"
 
       def install
         bin.install "dex"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/goto/dex/releases/download/v0.7.13/dex_Darwin_arm64.tar.gz"
-      sha256 "44bf5a58ac813f4c6b5fb3f397127ed634c2eff756eaab3532bfae2b94ca13e1"
+      url "https://github.com/goto/dex/releases/download/v0.7.14/dex_Darwin_arm64.tar.gz"
+      sha256 "c6af62f825caed4712403cfe5a77e7a53040d6760df0c56542e306fe2376adf9"
 
       def install
         bin.install "dex"
@@ -31,16 +31,16 @@ class Dex < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/goto/dex/releases/download/v0.7.13/dex_Linux_amd64.tar.gz"
-      sha256 "3378282faf31e3636b503f1a0ed86310d67bef3c4e1de2e8b14274321443f79d"
+      url "https://github.com/goto/dex/releases/download/v0.7.14/dex_Linux_amd64.tar.gz"
+      sha256 "dd1e6396e35548f29448ecc2eb8c82609b640e151b9da2c0b9b8f7066153b20f"
 
       def install
         bin.install "dex"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/dex/releases/download/v0.7.13/dex_Linux_arm64.tar.gz"
-      sha256 "eb807846a6ece183273c751c53384a1cc6b0807ee18b5edca71e0eb02cb4c6e8"
+      url "https://github.com/goto/dex/releases/download/v0.7.14/dex_Linux_arm64.tar.gz"
+      sha256 "888d3f57a00f3a4b8f99d8bbe67c858819f2438e39d476f552655de353f43872"
 
       def install
         bin.install "dex"
