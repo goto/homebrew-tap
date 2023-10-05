@@ -13,7 +13,7 @@ class Shield < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/goto/shield/releases/download/v0.6.6/shield_Darwin_x86_64.tar.gz"
-      sha256 "ffe6b481789c42d65e472af9352f6051d5a28ab468ead40e661899ef0dbb2556"
+      sha256 "8240513bdef7708139f65c31357f581d53405193e92187c7405865cadbb752b0"
 
       def install
         bin.install "shield"
@@ -21,7 +21,7 @@ class Shield < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/goto/shield/releases/download/v0.6.6/shield_Darwin_arm64.tar.gz"
-      sha256 "ae93496d22dcec62cee7ce7f6d7d54d92a1a529346439cc1041f031faef9a4dd"
+      sha256 "9920cf8f1b58b8faf906613d74e37692953ff413315101e606a0eb7bf3d0bebc"
 
       def install
         bin.install "shield"
@@ -30,17 +30,17 @@ class Shield < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/shield/releases/download/v0.6.6/shield_Linux_arm.tar.gz"
-      sha256 "9326b12b6357b0cc13dd51ee1c1395d4a69dfdfc199d84de4538cf3008ab443a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goto/shield/releases/download/v0.6.6/shield_Linux_arm64.tar.gz"
+      sha256 "4f0d73e5772454debd1d8db378a9b298e9fedc0518e5e2c2e8a4fa358b1b3b37"
 
       def install
         bin.install "shield"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/shield/releases/download/v0.6.6/shield_Linux_arm64.tar.gz"
-      sha256 "7ffe63f14a305899f58e696bef87ac92262f08a5ba7d45992ef40327220a0c1f"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/goto/shield/releases/download/v0.6.6/shield_Linux_arm.tar.gz"
+      sha256 "b0a21998ee2593da398c8533351ec6c590972434b2ed01d8be9c58e77456eef7"
 
       def install
         bin.install "shield"
@@ -48,7 +48,7 @@ class Shield < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/goto/shield/releases/download/v0.6.6/shield_Linux_x86_64.tar.gz"
-      sha256 "424192a400bee96a46d51bf5cda298ea8dcd2783fe6e21a5ee41ef566e36733e"
+      sha256 "31088ae974b2982f746fe247972df32bcd82fe0c1cb95f3cf0d822f43cc7a9bb"
 
       def install
         bin.install "shield"
