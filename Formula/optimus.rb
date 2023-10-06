@@ -11,17 +11,17 @@ class Optimus < Formula
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/optimus/releases/download/v0.9.9/optimus_0.9.9_macos_x86_64.tar.gz"
-      sha256 "9f18d5a5d5b07856719ec638659f7140171170157ecd2466499f9879a52b14b6"
+    if Hardware::CPU.arm?
+      url "https://github.com/goto/optimus/releases/download/v0.9.9/optimus_0.9.9_macos_arm64.tar.gz"
+      sha256 "78409cf90134d13398cbdd83ebefa80f890990109466080a150f99f3970b453b"
 
       def install
         bin.install "optimus"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/goto/optimus/releases/download/v0.9.9/optimus_0.9.9_macos_arm64.tar.gz"
-      sha256 "30c906044da3236eab7cc06ce87f6d4dbb4afe5d7eace0656ef289959367d085"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/optimus/releases/download/v0.9.9/optimus_0.9.9_macos_x86_64.tar.gz"
+      sha256 "1760dbc546399b5e1ee92b154ac57c904466b608c5eaee38462bd7f8838f5715"
 
       def install
         bin.install "optimus"
@@ -32,7 +32,7 @@ class Optimus < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/goto/optimus/releases/download/v0.9.9/optimus_0.9.9_linux_arm64.tar.gz"
-      sha256 "3cea45dbd694b89ec948ed050050422e0de535927de923fd4a30bbde99f2ab57"
+      sha256 "6bd5ccd2d2a1b6115c828b36778c3c689a9ed407040cd363f4c5cf073f55c781"
 
       def install
         bin.install "optimus"
@@ -40,7 +40,7 @@ class Optimus < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/goto/optimus/releases/download/v0.9.9/optimus_0.9.9_linux_x86_64.tar.gz"
-      sha256 "ae30ba7a234da51b4d2267b3615d6a4aca70742fbee5534d3f199b73c3e571b2"
+      sha256 "df82d001bcc2077e4ab244b5b0b0f971a8dbcb4966d36abe473eccb736e34f98"
 
       def install
         bin.install "optimus"
