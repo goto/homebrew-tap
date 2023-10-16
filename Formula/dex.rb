@@ -11,17 +11,17 @@ class Dex < Formula
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/goto/dex/releases/download/v0.7.20/dex_Darwin_arm64.tar.gz"
-      sha256 "6d6a90f8a89f6000d5914c6b0cac7a6a787aa74c9cb9e481a6af10c5cdb2929b"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/dex/releases/download/v0.7.20/dex_Darwin_amd64.tar.gz"
+      sha256 "706f66996aa8c1abd0b1c80d9bb03c40819684d6f2bd34dca006bd0259c2f842"
 
       def install
         bin.install "dex"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/dex/releases/download/v0.7.20/dex_Darwin_amd64.tar.gz"
-      sha256 "5882b73c9175de898b661edfb19222fbf7b688a194aadead516a3da9ee57dc91"
+    if Hardware::CPU.arm?
+      url "https://github.com/goto/dex/releases/download/v0.7.20/dex_Darwin_arm64.tar.gz"
+      sha256 "19ef100cc0ef741b7bb0e8ea97c6237b7b3611741408a9b896c9ab893d8f12cf"
 
       def install
         bin.install "dex"
@@ -30,17 +30,17 @@ class Dex < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/dex/releases/download/v0.7.20/dex_Linux_arm64.tar.gz"
-      sha256 "16b1dddb3316c6cd755c503c006e37bddf03f1e1f5d673bdb27a1d95d7344cc6"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/dex/releases/download/v0.7.20/dex_Linux_amd64.tar.gz"
+      sha256 "74b3dc749e5cde05314427c3d9538bc1ba0e8f57b6dec87cdd6f35a051d39755"
 
       def install
         bin.install "dex"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/dex/releases/download/v0.7.20/dex_Linux_amd64.tar.gz"
-      sha256 "94ae47dc41e1ff49def9fe7e2de71a452d2ce258df4b78bca08ea0078944ee2f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goto/dex/releases/download/v0.7.20/dex_Linux_arm64.tar.gz"
+      sha256 "54ebba84a7dc88e81db2506065d1326076e1c049286e39299919dd7486a598df"
 
       def install
         bin.install "dex"
