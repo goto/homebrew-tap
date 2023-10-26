@@ -5,14 +5,14 @@
 class SirenCortex < Formula
   desc "Cortex plugin for siren."
   homepage "https://github.com/goto/siren/plugins/providers/cortex"
-  version "0.6.9-dev"
+  version "0.6.9-cortex"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
-    url "https://github.com/goto/siren/releases/download/v0.6.9-dev/siren-cortex_Darwin_x86_64.tar.gz"
-    sha256 "3f7f0f531eaa145766ac2ea225df39a6b06b9e60212ade8f38fc49e38c503cc7"
+    url "https://github.com/goto/siren/releases/download/v0.6.9-cortex/siren-cortex_Darwin_x86_64.tar.gz"
+    sha256 "31216a465cbfa5d7f874bf9c7219f5e2a6a854d0366ff14873d7d5fbcbaf9b6d"
 
     def install
       bin.install "siren-cortex"
@@ -31,8 +31,8 @@ class SirenCortex < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/goto/siren/releases/download/v0.6.9-dev/siren-cortex_Linux_x86_64.tar.gz"
-      sha256 "08429ad2238417184e96ece6a62811766f056fee4d27e53483f4c4df6514bfc6"
+      url "https://github.com/goto/siren/releases/download/v0.6.9-cortex/siren-cortex_Linux_x86_64.tar.gz"
+      sha256 "ca8a8ff032bea5ab57e90ad203d4095ed611210f53f7a63746064d2e77a4be45"
 
       def install
         bin.install "siren-cortex"
