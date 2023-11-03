@@ -5,14 +5,14 @@
 class SirenCortex < Formula
   desc "Cortex plugin for siren."
   homepage "https://github.com/goto/siren/plugins/providers/cortex"
-  version "0.6.9"
+  version "0.6.10"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
-    url "https://github.com/goto/siren/releases/download/v0.6.9/siren-cortex_Darwin_x86_64.tar.gz"
-    sha256 "ce8f0087c48a1375354a5ade92337be0c94b35342f018d4c14b5b815ff7d434b"
+    url "https://github.com/goto/siren/releases/download/v0.6.10/siren-cortex_Darwin_x86_64.tar.gz"
+    sha256 "87c5804eb99e93c2857fcbe7e99d998d243ae608a251c04565695c04d888f83d"
 
     def install
       bin.install "siren-cortex"
@@ -31,8 +31,8 @@ class SirenCortex < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/goto/siren/releases/download/v0.6.9/siren-cortex_Linux_x86_64.tar.gz"
-      sha256 "49f6dfaadb90765108f9a4dbc45a315eba28a1ce5a3e4b43d9ef37092b78a3c6"
+      url "https://github.com/goto/siren/releases/download/v0.6.10/siren-cortex_Linux_x86_64.tar.gz"
+      sha256 "0e59425dd1e4d6912c920e54e2bca3e26d2d285662ab8474d05874e10cf7edae"
 
       def install
         bin.install "siren-cortex"
