@@ -12,7 +12,7 @@ class SirenCortex < Formula
 
   on_macos do
     url "https://github.com/goto/siren/releases/download/v0.6.9/siren-cortex_Darwin_x86_64.tar.gz"
-    sha256 "4185748cf915be7f774cec7d58cb5ceddafb89a2d718986f81b25147f7c17a47"
+    sha256 "ce8f0087c48a1375354a5ade92337be0c94b35342f018d4c14b5b815ff7d434b"
 
     def install
       bin.install "siren-cortex"
@@ -32,7 +32,7 @@ class SirenCortex < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/goto/siren/releases/download/v0.6.9/siren-cortex_Linux_x86_64.tar.gz"
-      sha256 "3c9631c342bdd28cfb4e6fa782c5810c2bf3bab20411c7328fcdb62b23e4ce33"
+      sha256 "49f6dfaadb90765108f9a4dbc45a315eba28a1ce5a3e4b43d9ef37092b78a3c6"
 
       def install
         bin.install "siren-cortex"
