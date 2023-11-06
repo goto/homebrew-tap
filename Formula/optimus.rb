@@ -11,17 +11,17 @@ class Optimus < Formula
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/optimus/releases/download/v0.10.1/optimus_0.10.1_macos_x86_64.tar.gz"
-      sha256 "56efa12efdc2264429abba5102171798e0b7f27f73a3c0ff8e5ad25c2a978779"
+    if Hardware::CPU.arm?
+      url "https://github.com/goto/optimus/releases/download/v0.10.1/optimus_0.10.1_macos_arm64.tar.gz"
+      sha256 "176e4db3b95a520d8b8897d54207536e35d598be3534d354494890fa81363a37"
 
       def install
         bin.install "optimus"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/goto/optimus/releases/download/v0.10.1/optimus_0.10.1_macos_arm64.tar.gz"
-      sha256 "4e23e96321050b9efe259fdae4ee1ce36abeb37d46543308014f5ba352a89f89"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/optimus/releases/download/v0.10.1/optimus_0.10.1_macos_x86_64.tar.gz"
+      sha256 "6509f6bdbd57cc5829f2c8fd14ab730301d3dfee2f0806a29cc09bc58c14a82b"
 
       def install
         bin.install "optimus"
@@ -30,17 +30,17 @@ class Optimus < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/optimus/releases/download/v0.10.1/optimus_0.10.1_linux_x86_64.tar.gz"
-      sha256 "3d1409cc17eb389cd8dac526267be449ff549d4c68a924143398c8d8b99e1bbb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goto/optimus/releases/download/v0.10.1/optimus_0.10.1_linux_arm64.tar.gz"
+      sha256 "74d5565403c5dac6e3cb367e02f8f92d042b8c4a73a5a51429f2cc22963e054a"
 
       def install
         bin.install "optimus"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/optimus/releases/download/v0.10.1/optimus_0.10.1_linux_arm64.tar.gz"
-      sha256 "734965348a068d763767c63b7e7c452de1d8003a11ff56cedea00cbbb46463d5"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/optimus/releases/download/v0.10.1/optimus_0.10.1_linux_x86_64.tar.gz"
+      sha256 "4788cc969ce3c3aaa8f8557daa562f3b648553856dd66aa7052577ef3bb19b64"
 
       def install
         bin.install "optimus"
