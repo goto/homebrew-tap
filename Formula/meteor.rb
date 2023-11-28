@@ -5,23 +5,23 @@
 class Meteor < Formula
   desc "Metadata collection tool."
   homepage "https://github.com/goto/meteor"
-  version "0.9.3"
+  version "0.9.4"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/goto/meteor/releases/download/v0.9.3/meteor_Darwin_arm64.tar.gz"
-      sha256 "c8582872009bd067724f29e7970affa4c3165122e9c2209d755253a2184fa00b"
+      url "https://github.com/goto/meteor/releases/download/v0.9.4/meteor_Darwin_arm64.tar.gz"
+      sha256 "53cee9229077e8d2e3678806a437a483a2d8ab7557b7cd33ea8ea1990fb6bbb3"
 
       def install
         bin.install "meteor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/meteor/releases/download/v0.9.3/meteor_Darwin_x86_64.tar.gz"
-      sha256 "022ab716cd200ce9d48381cedee883df157961301db74fe86e77378a0ec21a95"
+      url "https://github.com/goto/meteor/releases/download/v0.9.4/meteor_Darwin_x86_64.tar.gz"
+      sha256 "fda01600e5c82228e14c945f3e764287eb6347ae1855b7356c777702548b3fca"
 
       def install
         bin.install "meteor"
@@ -31,16 +31,16 @@ class Meteor < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/meteor/releases/download/v0.9.3/meteor_Linux_arm64.tar.gz"
-      sha256 "4d2925e78a2fdff6b7325225a8ddf9ca6ba762f0ae56982fb4575da7576fbacb"
+      url "https://github.com/goto/meteor/releases/download/v0.9.4/meteor_Linux_arm64.tar.gz"
+      sha256 "c70f3357e2055f3eb09b5caa4da6aba80cdfd012ffde6fba6c03f96661a3092d"
 
       def install
         bin.install "meteor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/meteor/releases/download/v0.9.3/meteor_Linux_x86_64.tar.gz"
-      sha256 "6f28442c972a55bb798ea52f59d7b871989daca7284b3eaf4dc449ae77c09336"
+      url "https://github.com/goto/meteor/releases/download/v0.9.4/meteor_Linux_x86_64.tar.gz"
+      sha256 "2011d74d3654a513b6dbfd0c1ebad38016e266b8a39fcf54240c78c174daecb4"
 
       def install
         bin.install "meteor"
