@@ -13,7 +13,7 @@ class Guardian < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/goto/guardian/releases/download/v0.8.2-alpha.4/guardian_0.8.2-alpha.4_Darwin_arm64.tar.gz"
-      sha256 "a8dd300b3ddbf63070697cbeef735760e12423e4d4609536847150e6baaac17a"
+      sha256 "3bf8b8aafb177def3ec900378a3f8b14cc15e4464c2d0166eeea69d047c778e4"
 
       def install
         bin.install "guardian"
@@ -21,7 +21,7 @@ class Guardian < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/goto/guardian/releases/download/v0.8.2-alpha.4/guardian_0.8.2-alpha.4_Darwin_x86_64.tar.gz"
-      sha256 "af8abb2a2c027cc49b7f120dd458760d9a175b42096216b3113e272acb5c32ea"
+      sha256 "480bf7bf48e3f41c04d7f7ee009722f7eb8d9184136e597bbc2b5714ded880e4"
 
       def install
         bin.install "guardian"
@@ -30,17 +30,17 @@ class Guardian < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/guardian/releases/download/v0.8.2-alpha.4/guardian_0.8.2-alpha.4_Linux_arm.tar.gz"
-      sha256 "b29b7f446599dfaa40d7f6652d302220b29736558b5a82a7465739d02d8e806a"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/guardian/releases/download/v0.8.2-alpha.4/guardian_0.8.2-alpha.4_Linux_x86_64.tar.gz"
+      sha256 "9d49ee7c93ca4be92e11eff0c592beb72713965a5ccad145c25457b4337a90bd"
 
       def install
         bin.install "guardian"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/guardian/releases/download/v0.8.2-alpha.4/guardian_0.8.2-alpha.4_Linux_x86_64.tar.gz"
-      sha256 "eff1c01e2d29fba14563bb2e47aebc41291894f9616a54891f9e28866af3450e"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/goto/guardian/releases/download/v0.8.2-alpha.4/guardian_0.8.2-alpha.4_Linux_arm.tar.gz"
+      sha256 "55732631a0f50712a2155ee7a1546fb7e0695de727016f2b52a9f60bee9c949c"
 
       def install
         bin.install "guardian"
@@ -48,7 +48,7 @@ class Guardian < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/goto/guardian/releases/download/v0.8.2-alpha.4/guardian_0.8.2-alpha.4_Linux_arm64.tar.gz"
-      sha256 "e816f8cf357e0cbf155230658b6f335ef9c3e22aa2851563ba8788fafa93d2a5"
+      sha256 "5712407a1926267db7fab51a76fea2672f3929a1057773564eddca0537ff6959"
 
       def install
         bin.install "guardian"
