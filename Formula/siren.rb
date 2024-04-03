@@ -5,14 +5,14 @@
 class Siren < Formula
   desc "Universal data observability tool."
   homepage "https://github.com/goto/siren"
-  version "0.7.3"
+  version "0.7.4"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
-    url "https://github.com/goto/siren/releases/download/v0.7.3/siren_Darwin_x86_64.tar.gz"
-    sha256 "015445c0e9cbebe536a87ee5d85fd4cf237c197951db69978439387bbd5777f8"
+    url "https://github.com/goto/siren/releases/download/v0.7.4/siren_Darwin_x86_64.tar.gz"
+    sha256 "f48505be2f63ba6768a6276dfd2b6e39e32a42c5a0912750896945900f192580"
 
     def install
       bin.install "siren"
@@ -31,8 +31,8 @@ class Siren < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/goto/siren/releases/download/v0.7.3/siren_Linux_x86_64.tar.gz"
-      sha256 "942bda6e42718d7ead5db0cd866b08e4e060eb53c8d591481a669c8247bb294f"
+      url "https://github.com/goto/siren/releases/download/v0.7.4/siren_Linux_x86_64.tar.gz"
+      sha256 "1f0df9c84aeaa8173e7e67a209dc9bccfa092f133541167776ea19269df42ede"
 
       def install
         bin.install "siren"
