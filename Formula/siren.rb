@@ -12,7 +12,7 @@ class Siren < Formula
 
   on_macos do
     url "https://github.com/goto/siren/releases/download/v0.7.4/siren_Darwin_x86_64.tar.gz"
-    sha256 "4a3212830219734ac002dbc57f3044a7ad9fb415b5961f7fc252968de48adf28"
+    sha256 "960c7c72e825a2db7459edd4c525740d905f5c0e482df1f7f96ef0ac5d647c39"
 
     def install
       bin.install "siren"
@@ -32,7 +32,7 @@ class Siren < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/goto/siren/releases/download/v0.7.4/siren_Linux_x86_64.tar.gz"
-      sha256 "f517a227a7f04712ab52a8fbfc6c3187f562a459b12e2e02f2a7391276025bf1"
+      sha256 "0b061a14a2b904f21c109ceed50ea1aab26da12246a87a84b6e987bc6bfd8812"
 
       def install
         bin.install "siren"
