@@ -13,7 +13,7 @@ class Stencil < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/goto/stencil/releases/download/v0.7.2-alpha/stencil_Darwin_x86_64'.tar.gz"
-      sha256 "7b9759e365f050474b0b6d0984b61d31a7a2bdcc94ef6be0b77366ae1fcb87a6"
+      sha256 "a5d0a11bfd09a2545b0dce3a7790119d040de045f8045d27499f97745ea83830"
 
       def install
         bin.install "stencil"
@@ -21,7 +21,7 @@ class Stencil < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/goto/stencil/releases/download/v0.7.2-alpha/stencil_Darwin_arm64'.tar.gz"
-      sha256 "ef1108d31f6f3e133e2a8a0e47595ea7a820bccaf4662af8ca16bf65269b34b8"
+      sha256 "5fb71364d4221a39961671641d2e3c69931ed6031f92e0813c1991086168db0f"
 
       def install
         bin.install "stencil"
@@ -32,7 +32,7 @@ class Stencil < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/goto/stencil/releases/download/v0.7.2-alpha/stencil_Linux_x86_64'.tar.gz"
-      sha256 "e326ec0393701a245d70c3a2a381fb6bb96bb28fc5e7027ebcef8a4c9a11fcab"
+      sha256 "31fe80f022d0295c6793dfaae197f4b1fdf2179fbc5ef37aee8ef087570609dd"
 
       def install
         bin.install "stencil"
@@ -40,7 +40,7 @@ class Stencil < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/goto/stencil/releases/download/v0.7.2-alpha/stencil_Linux_armv6'.tar.gz"
-      sha256 "6fed64bfc1857ec7258e67c9682e1fd3b7ad17c88ab6745d3cdf3e04829479ac"
+      sha256 "aebc7d5cea68f9ab4afe9113d3e0baf4d5ba9b68ee3a5cd9fb5f604be31000a6"
 
       def install
         bin.install "stencil"
@@ -48,7 +48,7 @@ class Stencil < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/goto/stencil/releases/download/v0.7.2-alpha/stencil_Linux_arm64'.tar.gz"
-      sha256 "60e6de71f42c301966ab99b1ef51f4c5598b37673795aa47f0c768bf6c1a63cd"
+      sha256 "ead4d8d7eeb98d2d3a8b6999771adfa882bb269b5964d22aab52a40869650ccc"
 
       def install
         bin.install "stencil"
