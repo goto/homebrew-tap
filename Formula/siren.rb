@@ -5,20 +5,20 @@
 class Siren < Formula
   desc "Universal data observability tool."
   homepage "https://github.com/goto/siren"
-  version "0.7.4"
+  version "0.7.5-alpha"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
-    url "https://github.com/goto/siren/releases/download/v0.7.4/siren_Darwin_x86_64.tar.gz"
-    sha256 "398bc0ba3f19dabb47d653b24cdb92d1d0e5651af21cfe4fbc82a2c532fa1a63"
+    url "https://github.com/goto/siren/releases/download/v0.7.5-alpha/siren_Darwin_x86_64.tar.gz"
+    sha256 "4ccd04f6d2d9cb4d0d1f97596a0be1597b00ad80202e18f88e6d6c96d109f94e"
 
     def install
       bin.install "siren"
     end
 
-    if Hardware::CPU.arm?
+    on_arm do
       def caveats
         <<~EOS
           The darwin_arm64 architecture is not supported for the Siren
@@ -30,12 +30,14 @@ class Siren < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/siren/releases/download/v0.7.4/siren_Linux_x86_64.tar.gz"
-      sha256 "319287c2bea473a24efb44000f754fe4cd39fd8d7b83dbdfc6079f0198fd9f06"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/goto/siren/releases/download/v0.7.5-alpha/siren_Linux_x86_64.tar.gz"
+        sha256 "525effbfbb37b2cf676f191c97200d4888bd8a606ff80c790929764668afb61d"
 
-      def install
-        bin.install "siren"
+        def install
+          bin.install "siren"
+        end
       end
     end
   end
