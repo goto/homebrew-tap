@@ -13,7 +13,7 @@ class Guardian < Formula
   on_macos do
     on_intel do
       url "https://github.com/goto/guardian/releases/download/v0.11.2-beta.2/guardian_0.11.2-beta.2_Darwin_x86_64.tar.gz"
-      sha256 "9e68ea5b985b7b577879dcaad7f0deb30c5cf5a80ef4db06d40f2313c2d40841"
+      sha256 "226d15f336fe43be155f3330a311818bda9cf1ff4dc5609f36c7e540813a6235"
 
       def install
         bin.install "guardian"
@@ -21,7 +21,7 @@ class Guardian < Formula
     end
     on_arm do
       url "https://github.com/goto/guardian/releases/download/v0.11.2-beta.2/guardian_0.11.2-beta.2_Darwin_arm64.tar.gz"
-      sha256 "5e138b79a874b5d09135b97668fe8e26792de3797893fa34878c67db8cb72f4a"
+      sha256 "c8b33eaa420d869bd9e53ec3e217e4dc509ee6237ec3007b42766f60d806c486"
 
       def install
         bin.install "guardian"
@@ -33,7 +33,7 @@ class Guardian < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/goto/guardian/releases/download/v0.11.2-beta.2/guardian_0.11.2-beta.2_Linux_x86_64.tar.gz"
-        sha256 "b2f3e1ad96997cb15e7bec22095d41be0d394d871caa58d22cf804adabc0e1f7"
+        sha256 "80e26274af3226ddc43613aa2789c0af27425c9463ea554fe2695403645166a8"
 
         def install
           bin.install "guardian"
@@ -43,7 +43,7 @@ class Guardian < Formula
     on_arm do
       if !Hardware::CPU.is_64_bit?
         url "https://github.com/goto/guardian/releases/download/v0.11.2-beta.2/guardian_0.11.2-beta.2_Linux_arm.tar.gz"
-        sha256 "09b27bd38e8b5b40430363ece80acebe66253ad3906408a156417abbd7d362c2"
+        sha256 "987581281931b76432d606aa88a7af04b12a2a5d00d1b94453888248d9a1b28e"
 
         def install
           bin.install "guardian"
@@ -53,7 +53,7 @@ class Guardian < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/goto/guardian/releases/download/v0.11.2-beta.2/guardian_0.11.2-beta.2_Linux_arm64.tar.gz"
-        sha256 "4bef4dcf951fb773882e57c8937be8c848e153b95154c9918df3a8aeea41ce95"
+        sha256 "5601553a6d6e0f99609d4813013730edcae4022d3d6a4393f2e7d6d605a00e03"
 
         def install
           bin.install "guardian"
