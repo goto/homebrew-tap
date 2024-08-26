@@ -5,23 +5,23 @@
 class Compass < Formula
   desc "Metadata Discovery and Lineage Service"
   homepage "https://github.com/goto/compass"
-  version "0.7.7"
+  version "0.7.8"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/goto/compass/releases/download/v0.7.7/compass_Darwin_x86_64.tar.gz"
-      sha256 "fb7ab0cba8c0687f6ba300bca02e02dc670d58b2f87ad5430ea07a6a11f1f90f"
+      url "https://github.com/goto/compass/releases/download/v0.7.8/compass_Darwin_x86_64.tar.gz"
+      sha256 "b7b3b7e3c441c112ab9ff8618f5d82670f617407c239223cff43ff29e4023d24"
 
       def install
         bin.install "compass"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/goto/compass/releases/download/v0.7.7/compass_Darwin_arm64.tar.gz"
-      sha256 "ba7a90a4413a07cad3741300f9ef24933e00afa312d1f09b432a5fbe706c8737"
+      url "https://github.com/goto/compass/releases/download/v0.7.8/compass_Darwin_arm64.tar.gz"
+      sha256 "5a868fd27ea932c2c94078be271533d387563ef583cd0116d7e01075884ac34d"
 
       def install
         bin.install "compass"
@@ -31,24 +31,24 @@ class Compass < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/goto/compass/releases/download/v0.7.7/compass_Linux_x86_64.tar.gz"
-      sha256 "97b47fa37d964870f2f68a85a06cd69a8dc2ef51e646f9d9c292879170345e9b"
+      url "https://github.com/goto/compass/releases/download/v0.7.8/compass_Linux_x86_64.tar.gz"
+      sha256 "5fdc65779433b86c134eeeaaa64c70fea256e9d037a5690b6964b433776b706a"
 
       def install
         bin.install "compass"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/compass/releases/download/v0.7.7/compass_Linux_arm.tar.gz"
-      sha256 "15ad7c2f69c460ac83bacd91bffa84e1dea15cfa4d2baaa60d86ade136d8a7c0"
+      url "https://github.com/goto/compass/releases/download/v0.7.8/compass_Linux_arm.tar.gz"
+      sha256 "4b9b4c60b266c9d8925c0461ff89d2f544c6fa1db48052a0f7a7f7b7b2229fa5"
 
       def install
         bin.install "compass"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/compass/releases/download/v0.7.7/compass_Linux_arm64.tar.gz"
-      sha256 "1ab71e194ac20606281380ccb683a8736e0c7f7806b2bcd16837b0e33bebf274"
+      url "https://github.com/goto/compass/releases/download/v0.7.8/compass_Linux_arm64.tar.gz"
+      sha256 "95b2afb616ba30be99a131906b6e9b1e3da780dce34ecbbddf32aece466c310e"
 
       def install
         bin.install "compass"
