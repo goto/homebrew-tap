@@ -11,17 +11,17 @@ class Entropy < Formula
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.1.27-beta/entropy_0.1.27-beta_macos_x86_64.tar.gz"
-      sha256 "b4d5bd4bdcc884b305a8dd16073dd01667b6b934d65be2a8180421d5780d6986"
+    if Hardware::CPU.arm?
+      url "https://github.com/goto/entropy/releases/download/v0.1.27-beta/entropy_0.1.27-beta_macos_arm64.tar.gz"
+      sha256 "2cf237b8297a5fa9962a0bdd64694cf034ddcba6889d6baf797298ae32befa19"
 
       def install
         bin.install "entropy"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/goto/entropy/releases/download/v0.1.27-beta/entropy_0.1.27-beta_macos_arm64.tar.gz"
-      sha256 "f40c2d2adff9d63bf00b1c9a1e465c858673de5414d1f513d842674bae39be64"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/entropy/releases/download/v0.1.27-beta/entropy_0.1.27-beta_macos_x86_64.tar.gz"
+      sha256 "af823a6e8d274cabced87389a869b522cdbc31218d035eac42478f37bbd34298"
 
       def install
         bin.install "entropy"
@@ -30,17 +30,17 @@ class Entropy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.1.27-beta/entropy_0.1.27-beta_linux_x86_64.tar.gz"
-      sha256 "dbd2ebd21ca2f63c698aa8383d1d5abdd4df5b2a258624c186641261b1a4b12e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goto/entropy/releases/download/v0.1.27-beta/entropy_0.1.27-beta_linux_arm64.tar.gz"
+      sha256 "61dd9016149c0d18fd60815e54f4c67f61aa30e1341699340a0718d9ddc31126"
 
       def install
         bin.install "entropy"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/entropy/releases/download/v0.1.27-beta/entropy_0.1.27-beta_linux_arm64.tar.gz"
-      sha256 "a6a2eb5712b1eeccc53dd7417710d93b147c861815855d33d8f3e87249bea2df"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/entropy/releases/download/v0.1.27-beta/entropy_0.1.27-beta_linux_x86_64.tar.gz"
+      sha256 "9a7f973bad7f8b6e3307cc684965fb6a321ec4ea08fab13c50a665fbc5d2e19d"
 
       def install
         bin.install "entropy"
