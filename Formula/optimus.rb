@@ -5,23 +5,23 @@
 class Optimus < Formula
   desc "Optimus helps your organization to build & manage data pipelines with ease."
   homepage "https://goto.github.io/optimus"
-  version "0.16.2"
+  version "0.17.0"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/goto/optimus/releases/download/v0.16.2/optimus_0.16.2_macos_arm64.tar.gz"
-      sha256 "eed07f9aff21e48d7c77a26c8efc1b2f9c4b527579affe483acd9dfbee33a8f9"
+      url "https://github.com/goto/optimus/releases/download/v0.17.0/optimus_0.17.0_macos_arm64.tar.gz"
+      sha256 "700575e8990db9b4e9a37ad3170a66173190c2daaed8bbc106df22a87899ad40"
 
       def install
         bin.install "optimus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/optimus/releases/download/v0.16.2/optimus_0.16.2_macos_x86_64.tar.gz"
-      sha256 "f2abe849d045fab0e4d95841b75656057bb37bd6568d9230abc5c0d3c0d54209"
+      url "https://github.com/goto/optimus/releases/download/v0.17.0/optimus_0.17.0_macos_x86_64.tar.gz"
+      sha256 "d517b2aacd36bd6125fa391f1e100bf374774613669ac2a4843a75bf535fc032"
 
       def install
         bin.install "optimus"
@@ -30,17 +30,17 @@ class Optimus < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/optimus/releases/download/v0.16.2/optimus_0.16.2_linux_x86_64.tar.gz"
-      sha256 "bd463423641b7be7b40f7c22ed53dad6b5dfe6bec8a9d95d29d84910f75962fc"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goto/optimus/releases/download/v0.17.0/optimus_0.17.0_linux_arm64.tar.gz"
+      sha256 "3995c49db515175f61aaea9a99eb6e7b060644f509e58c5f37561526c111b1d6"
 
       def install
         bin.install "optimus"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/optimus/releases/download/v0.16.2/optimus_0.16.2_linux_arm64.tar.gz"
-      sha256 "52f77b7ac72c6889a41c26be21cefb9a7ddd1ddd202ca7e0a87ef2b680c627a4"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/optimus/releases/download/v0.17.0/optimus_0.17.0_linux_x86_64.tar.gz"
+      sha256 "464d5fe4ec03c0328e9dbfcd072fcd627198e0a2bf13a00e08c9671c8a427fc3"
 
       def install
         bin.install "optimus"
