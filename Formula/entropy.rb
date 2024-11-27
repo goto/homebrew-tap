@@ -5,23 +5,23 @@
 class Entropy < Formula
   desc "Infrastructure orchestration tool."
   homepage "https://github.com/goto/entropy"
-  version "0.2.17-rc"
+  version "0.2.18-rc"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/goto/entropy/releases/download/v0.2.17-rc/entropy_0.2.17-rc_macos_arm64.tar.gz"
-      sha256 "533ed1e3fe3cee8f3724c7e9254373bb7bc68e762319319c487381754bbcd524"
+      url "https://github.com/goto/entropy/releases/download/v0.2.18-rc/entropy_0.2.18-rc_macos_arm64.tar.gz"
+      sha256 "c285e4985297e36af658f0337e6ed366379f3ee921752e886ed0bdcbadb7dbe0"
 
       def install
         bin.install "entropy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.2.17-rc/entropy_0.2.17-rc_macos_x86_64.tar.gz"
-      sha256 "8236343517207e8a3ca912559b3359ec4986f32a9e65accebd62a080bcb6b051"
+      url "https://github.com/goto/entropy/releases/download/v0.2.18-rc/entropy_0.2.18-rc_macos_x86_64.tar.gz"
+      sha256 "b1e731083509a23c129c1befdba560663ad012dc7868d95a662a7886e029bdd3"
 
       def install
         bin.install "entropy"
@@ -31,16 +31,16 @@ class Entropy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/entropy/releases/download/v0.2.17-rc/entropy_0.2.17-rc_linux_arm64.tar.gz"
-      sha256 "8ee0d583604519b51145475e5996368ddc6bbfe19620b161b6cd7fc7951e67b7"
+      url "https://github.com/goto/entropy/releases/download/v0.2.18-rc/entropy_0.2.18-rc_linux_arm64.tar.gz"
+      sha256 "91b11734022947f4ac48b225da91bf25638bd10f340d824712a9b70f8ac1415c"
 
       def install
         bin.install "entropy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.2.17-rc/entropy_0.2.17-rc_linux_x86_64.tar.gz"
-      sha256 "6c115e46717fd1b23a5549fe52c37a8bfe175add35748a92956b50bad913b145"
+      url "https://github.com/goto/entropy/releases/download/v0.2.18-rc/entropy_0.2.18-rc_linux_x86_64.tar.gz"
+      sha256 "1e6b2a6fc97481e951e6d91d3ad5c69089297cb2b5833196018c49b84d564615"
 
       def install
         bin.install "entropy"
