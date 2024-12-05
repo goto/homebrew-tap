@@ -13,7 +13,7 @@ class Entropy < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/goto/entropy/releases/download/v0.2.19-rc/entropy_0.2.19-rc_macos_x86_64.tar.gz"
-      sha256 "67425c2ff7fcd104966184dadd04e5e65becc195578f779bf785cf82bdc16ad5"
+      sha256 "ffc2c499cac3db6389c2b1441410ad21f4924b702794c7b2c244761c2bb4ac89"
 
       def install
         bin.install "entropy"
@@ -21,7 +21,7 @@ class Entropy < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/goto/entropy/releases/download/v0.2.19-rc/entropy_0.2.19-rc_macos_arm64.tar.gz"
-      sha256 "d00885095cd9a22c12336d0abddcfc88a8eded76e31fc99034f308231ea7b860"
+      sha256 "981157ef4f640882ee632de304cc392fb05431d9ccc62d7523e71792b288d678"
 
       def install
         bin.install "entropy"
@@ -32,7 +32,7 @@ class Entropy < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/goto/entropy/releases/download/v0.2.19-rc/entropy_0.2.19-rc_linux_x86_64.tar.gz"
-      sha256 "d62a6baf42b261876ec97225c065720d928f9ce3021c85952b66b4367950a81f"
+      sha256 "9228396a84149e7596e5cac99c8d4a8319355675f50f3804c783130b01af3efc"
 
       def install
         bin.install "entropy"
@@ -40,7 +40,7 @@ class Entropy < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/goto/entropy/releases/download/v0.2.19-rc/entropy_0.2.19-rc_linux_arm64.tar.gz"
-      sha256 "5b25b4aec8a5092d48c6cf6d45ac8c156b53aea6ee90bf61b70be086eb02df83"
+      sha256 "e9cec2b5b3006f8ae0f9095593c6b831db9c69fdfbbf9cc30da23a121161be87"
 
       def install
         bin.install "entropy"
