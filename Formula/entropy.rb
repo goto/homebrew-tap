@@ -11,17 +11,17 @@ class Entropy < Formula
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/goto/entropy/releases/download/v0.2.20-rc/entropy_0.2.20-rc_macos_arm64.tar.gz"
-      sha256 "ebcd7bb806c96fe9c77b8c5015a8ae1e271343506bc61ef83ac147b94ced81f9"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/entropy/releases/download/v0.2.20-rc/entropy_0.2.20-rc_macos_x86_64.tar.gz"
+      sha256 "4bd70873486a5b6e305e0165ca8981cc6b96cdda03bdbd0a7160f5224b5783f2"
 
       def install
         bin.install "entropy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.2.20-rc/entropy_0.2.20-rc_macos_x86_64.tar.gz"
-      sha256 "f93345146455ef43f5093601435a4debe099e5c5effc8ad7fbb9df87f773761f"
+    if Hardware::CPU.arm?
+      url "https://github.com/goto/entropy/releases/download/v0.2.20-rc/entropy_0.2.20-rc_macos_arm64.tar.gz"
+      sha256 "5172b917dd1fdfadb03e90a5392b144ba78615eb70bbb9266713167a702a8b9d"
 
       def install
         bin.install "entropy"
@@ -30,17 +30,17 @@ class Entropy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/entropy/releases/download/v0.2.20-rc/entropy_0.2.20-rc_linux_arm64.tar.gz"
-      sha256 "deea3be139171f93fd2f81fd0a750dd5be40a0a83f69f278426589ac2c1b4ae1"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/entropy/releases/download/v0.2.20-rc/entropy_0.2.20-rc_linux_x86_64.tar.gz"
+      sha256 "5e11bae4950089e3d54dc5ee103faea6cd75528407113988ae36ade428ec1c72"
 
       def install
         bin.install "entropy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.2.20-rc/entropy_0.2.20-rc_linux_x86_64.tar.gz"
-      sha256 "471c7ca83b0a96b37224e073fc20d5decede2c64d54328a63418898f4fc2de4f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goto/entropy/releases/download/v0.2.20-rc/entropy_0.2.20-rc_linux_arm64.tar.gz"
+      sha256 "16529f3afc55b0671704c428a7280678fda12fc7af19b7df825091d4c105666c"
 
       def install
         bin.install "entropy"
