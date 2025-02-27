@@ -13,7 +13,7 @@ class Compass < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/goto/compass/releases/download/v0.8.1/compass_Darwin_x86_64.tar.gz"
-      sha256 "ff94f59cbc37f11ecf2ad595e3d438a4cb76eaa5302921980d19ababeb0c1e83"
+      sha256 "a8bb8139f832313003e1a991a40657c80df96f6f4fc743ac6063476cd9e7a933"
 
       def install
         bin.install "compass"
@@ -21,7 +21,7 @@ class Compass < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/goto/compass/releases/download/v0.8.1/compass_Darwin_arm64.tar.gz"
-      sha256 "a224426e955093d3986db3d6db4546ef25317464d93d16dcde827981c048b0de"
+      sha256 "ed0b8d4906a686bfded8bfce0623a0e0151516f29e63566c8849e1f90ecd0ec9"
 
       def install
         bin.install "compass"
@@ -32,7 +32,7 @@ class Compass < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/goto/compass/releases/download/v0.8.1/compass_Linux_x86_64.tar.gz"
-      sha256 "2ae44541515875630038ddc3fcd9527841e7cf84fc50ea7915248f9d0945bd57"
+      sha256 "b434a23198ee6210296c60a390aa63894f8b803bef7570429b21d440bfb7c0b2"
 
       def install
         bin.install "compass"
@@ -40,7 +40,7 @@ class Compass < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/goto/compass/releases/download/v0.8.1/compass_Linux_arm.tar.gz"
-      sha256 "0412358d68f9c7515f247ed8e295df2cc448e787855d2200d029f00c466a8500"
+      sha256 "e06b50247381f987c3f5c18f656ca238479da21e8e8a8409fd49f5aebc76c55d"
 
       def install
         bin.install "compass"
@@ -48,7 +48,7 @@ class Compass < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/goto/compass/releases/download/v0.8.1/compass_Linux_arm64.tar.gz"
-      sha256 "fedffbdd18639730c5fa59a27993d114606761fc568c00a2e4ec03b6a371e267"
+      sha256 "435f0e8ce8ed4152206ddcc13178c0ff39ec2f0836d7fb5f4a95302fd1ba17c9"
 
       def install
         bin.install "compass"
