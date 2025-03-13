@@ -5,23 +5,23 @@
 class Guardian < Formula
   desc "Universal data access tool"
   homepage "https://github.com/goto/guardian"
-  version "0.12.9"
+  version "0.12.10-beta.1"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/goto/guardian/releases/download/v0.12.9/guardian_0.12.9_Darwin_x86_64.tar.gz"
-      sha256 "cc1bae446cb86741ef49d1310c8b1735d89b447d898c8823ce2296ad734f71e2"
+      url "https://github.com/goto/guardian/releases/download/v0.12.10-beta.1/guardian_0.12.10-beta.1_Darwin_x86_64.tar.gz"
+      sha256 "0f694d605d5844764b8bc395cb02593d6ff73a054491d00442608b9681092f7a"
 
       def install
         bin.install "guardian"
       end
     end
     on_arm do
-      url "https://github.com/goto/guardian/releases/download/v0.12.9/guardian_0.12.9_Darwin_arm64.tar.gz"
-      sha256 "5a3601a740c579ed183e40713487b976ea0a02bb62dbae265926cb5007d23143"
+      url "https://github.com/goto/guardian/releases/download/v0.12.10-beta.1/guardian_0.12.10-beta.1_Darwin_arm64.tar.gz"
+      sha256 "c0b1421cf552445549b450ba684e8839f7a6c7882e719a9504f2e7e43df329b5"
 
       def install
         bin.install "guardian"
@@ -32,8 +32,8 @@ class Guardian < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goto/guardian/releases/download/v0.12.9/guardian_0.12.9_Linux_x86_64.tar.gz"
-        sha256 "b37e116ecf84d0cdac1970c33af2daa08da1a462c81652010e3c5fdcc82cbe4f"
+        url "https://github.com/goto/guardian/releases/download/v0.12.10-beta.1/guardian_0.12.10-beta.1_Linux_x86_64.tar.gz"
+        sha256 "c58409a988cc8baf76efcec5eaee38b81600c4e593d095a9a050adfba90efda1"
 
         def install
           bin.install "guardian"
@@ -42,8 +42,8 @@ class Guardian < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/goto/guardian/releases/download/v0.12.9/guardian_0.12.9_Linux_arm.tar.gz"
-        sha256 "77e9b36d4d3a7c77b3d326cb8c99441ff92a5d5ca7aa33f273f8ab9576ee333c"
+        url "https://github.com/goto/guardian/releases/download/v0.12.10-beta.1/guardian_0.12.10-beta.1_Linux_arm.tar.gz"
+        sha256 "95a3f852d6ee614828a6193ab174f56ff8a4915f672303a9da1586bce8289903"
 
         def install
           bin.install "guardian"
@@ -52,8 +52,8 @@ class Guardian < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goto/guardian/releases/download/v0.12.9/guardian_0.12.9_Linux_arm64.tar.gz"
-        sha256 "6c94470cedf83a4c38179e08d7e2cfed396d60b86b00f97eb59cf6ae54e13cce"
+        url "https://github.com/goto/guardian/releases/download/v0.12.10-beta.1/guardian_0.12.10-beta.1_Linux_arm64.tar.gz"
+        sha256 "6e0ec87bb0d36188eed99e0f6232cfa0b53380bc64751857d46011a90c43b731"
 
         def install
           bin.install "guardian"
