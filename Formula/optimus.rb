@@ -5,23 +5,23 @@
 class Optimus < Formula
   desc "Optimus helps your organization to build & manage data pipelines with ease."
   homepage "https://goto.github.io/optimus"
-  version "0.21.5"
+  version "0.21.6"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/goto/optimus/releases/download/v0.21.5/optimus_0.21.5_macos_arm64.tar.gz"
-      sha256 "c0e0639d314a08fed53313578c1f13ce11ed02306fda2fb8612dd08016ac0779"
+      url "https://github.com/goto/optimus/releases/download/v0.21.6/optimus_0.21.6_macos_arm64.tar.gz"
+      sha256 "e5e6c2f2124c6e4ea21d26d555e6f8751ebbb8270bd097cc37029613bd682366"
 
       def install
         bin.install "optimus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/optimus/releases/download/v0.21.5/optimus_0.21.5_macos_x86_64.tar.gz"
-      sha256 "bab9b9ec5c17467a11fc474e5dcdc3380552df99936cb596e935f939befd6306"
+      url "https://github.com/goto/optimus/releases/download/v0.21.6/optimus_0.21.6_macos_x86_64.tar.gz"
+      sha256 "254f91b59fd08f13bab2c4a7f6f7b0cb41b8073d7d81a63d9281f5dce9e4e295"
 
       def install
         bin.install "optimus"
@@ -30,17 +30,17 @@ class Optimus < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/optimus/releases/download/v0.21.5/optimus_0.21.5_linux_arm64.tar.gz"
-      sha256 "72a5cec1ba33866837818acf4996480447f056696d6aefd76238c4bb400144ca"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/optimus/releases/download/v0.21.6/optimus_0.21.6_linux_x86_64.tar.gz"
+      sha256 "cff29dd24fab16ec1b13bd90c1b59f50390fa11fde1919885a7216d2ba0bb4b0"
 
       def install
         bin.install "optimus"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/optimus/releases/download/v0.21.5/optimus_0.21.5_linux_x86_64.tar.gz"
-      sha256 "284177ce404dce133d86da0223b9d9e87f33462233adc5088ccfaa44ee93aed6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goto/optimus/releases/download/v0.21.6/optimus_0.21.6_linux_arm64.tar.gz"
+      sha256 "c8897bb9658edb00c627a337a7e9b6723b371f506e7ef5933394265e412ed7a4"
 
       def install
         bin.install "optimus"
