@@ -5,23 +5,23 @@
 class Entropy < Formula
   desc "Infrastructure orchestration tool."
   homepage "https://github.com/goto/entropy"
-  version "0.3.13-beta-2"
+  version "0.3.13"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/goto/entropy/releases/download/v0.3.13-beta-2/entropy_0.3.13-beta-2_macos_arm64.tar.gz"
-      sha256 "ab41526cd5430ea37aa5a6f5ccd4e3cccd4e2c5a9049160c2a9b3219b9ed9660"
+      url "https://github.com/goto/entropy/releases/download/v0.3.13/entropy_0.3.13_macos_arm64.tar.gz"
+      sha256 "55576e31871ff2dada071808acb52d34e09efdec9c28bf2bdb413a4b6386fb8a"
 
       def install
         bin.install "entropy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.3.13-beta-2/entropy_0.3.13-beta-2_macos_x86_64.tar.gz"
-      sha256 "f62203df1f30a50b9c7964a5022989b3acbebd1c2707debc755ecd4eba674290"
+      url "https://github.com/goto/entropy/releases/download/v0.3.13/entropy_0.3.13_macos_x86_64.tar.gz"
+      sha256 "a46f102bbfba08d6f99a8f43b9273fb26cc11766445fb4c174b503839fc0cac9"
 
       def install
         bin.install "entropy"
@@ -31,16 +31,16 @@ class Entropy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/entropy/releases/download/v0.3.13-beta-2/entropy_0.3.13-beta-2_linux_arm64.tar.gz"
-      sha256 "558c7b33922a5610ef29ce77298c318b40310dd0e54d57744141ae03221c6ea1"
+      url "https://github.com/goto/entropy/releases/download/v0.3.13/entropy_0.3.13_linux_arm64.tar.gz"
+      sha256 "d8f27dad17860dc0337ff698c5dd00348aec5ce0e3bbb17a37c9151ce3bffa2b"
 
       def install
         bin.install "entropy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.3.13-beta-2/entropy_0.3.13-beta-2_linux_x86_64.tar.gz"
-      sha256 "b6effdbb0a0e3a3455b5df364f618843439cee45a0ae4e991986d14acc0dac85"
+      url "https://github.com/goto/entropy/releases/download/v0.3.13/entropy_0.3.13_linux_x86_64.tar.gz"
+      sha256 "05d16fd337224f84666f8417fd64fb2c8a55c95717b4da449a7ad75dee3d6f20"
 
       def install
         bin.install "entropy"
