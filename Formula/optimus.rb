@@ -5,23 +5,23 @@
 class Optimus < Formula
   desc "Optimus helps your organization to build & manage data pipelines with ease."
   homepage "https://goto.github.io/optimus"
-  version "0.23.0"
+  version "0.23.1"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/goto/optimus/releases/download/v0.23.0/optimus_0.23.0_macos_arm64.tar.gz"
-      sha256 "5a6f6d8fd1117c7ef4754d88bdba32242eacadbc7f2e5787746e0c0a69d4001c"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/optimus/releases/download/v0.23.1/optimus_0.23.1_macos_x86_64.tar.gz"
+      sha256 "78e0ded61ef9832009598bacf16f88af444ec146ad36d2f8dae2c4c7fbafb51c"
 
       def install
         bin.install "optimus"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/optimus/releases/download/v0.23.0/optimus_0.23.0_macos_x86_64.tar.gz"
-      sha256 "d4f9b21df14bcd1d30daf28c05dd680aa54f5663cd1688f49aa16146f33526ed"
+    if Hardware::CPU.arm?
+      url "https://github.com/goto/optimus/releases/download/v0.23.1/optimus_0.23.1_macos_arm64.tar.gz"
+      sha256 "26ccfeddec4735d6498e431a4e0c620ae0ad48b10ed20870530f513ffa571582"
 
       def install
         bin.install "optimus"
@@ -31,16 +31,16 @@ class Optimus < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/optimus/releases/download/v0.23.0/optimus_0.23.0_linux_arm64.tar.gz"
-      sha256 "1fa702e6a1a455334ff3c76174516c5a32a1aed88e0f42faa4fd954a47a79bcf"
+      url "https://github.com/goto/optimus/releases/download/v0.23.1/optimus_0.23.1_linux_arm64.tar.gz"
+      sha256 "edd1c76f5ec1208e5f5c8fc628ece43a7e1236b20cecaa581113feac32bde163"
 
       def install
         bin.install "optimus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/optimus/releases/download/v0.23.0/optimus_0.23.0_linux_x86_64.tar.gz"
-      sha256 "ad2231ae902163ff4dded694b37c2131dd224940aab8b46fbbe38b0dab7083d7"
+      url "https://github.com/goto/optimus/releases/download/v0.23.1/optimus_0.23.1_linux_x86_64.tar.gz"
+      sha256 "1593d5daee182bcd145b9af448895a5460645000e2b2ae29ae8ff164fb413f79"
 
       def install
         bin.install "optimus"
