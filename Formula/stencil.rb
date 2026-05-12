@@ -13,7 +13,7 @@ class Stencil < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/goto/stencil/releases/download/v0.8.9/stencil_Darwin_x86_64'.tar.gz"
-      sha256 "943a85c0fc7556ccd5342b249f1a280919a9a6ba45ce2e6f12a13fa930bbd230"
+      sha256 "1a965eef4aa0cee24ca8a92ef73606eb2b386a8a96c6fd843a4f143ac7435199"
 
       define_method(:install) do
         bin.install "stencil"
@@ -21,7 +21,7 @@ class Stencil < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/goto/stencil/releases/download/v0.8.9/stencil_Darwin_arm64'.tar.gz"
-      sha256 "96fc1c64b75d358b126618181503ff1d7e7d42a8672e6c7a25a8b6a3048e7ace"
+      sha256 "7a2ad7ff1d99564772410abcf1819f43066081ad194604d2d4eb2991424a7cf7"
 
       define_method(:install) do
         bin.install "stencil"
@@ -32,21 +32,21 @@ class Stencil < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/goto/stencil/releases/download/v0.8.9/stencil_Linux_x86_64'.tar.gz"
-      sha256 "88eaa071d25352b258e1acc631fc5545dd12dae5d680d1e0723086593247f644"
+      sha256 "7bc3fcc368561268a932ada52dbea25517d0d20ccfadb2ade7777ba95fe52708"
       define_method(:install) do
         bin.install "stencil"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/goto/stencil/releases/download/v0.8.9/stencil_Linux_armv6'.tar.gz"
-      sha256 "88f29557826284e63f168231e7446002644705378dc84af91eb72d952040717d"
+      sha256 "e5cbc497acc61b3da9327c7e81279e413d2b80a16d55df87a025b865e65afde2"
       define_method(:install) do
         bin.install "stencil"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/goto/stencil/releases/download/v0.8.9/stencil_Linux_arm64'.tar.gz"
-      sha256 "b3a8f5c2776fa5883c53d82f5ef940553a4cb712046b0c571d208bfd495e5004"
+      sha256 "e08974b904658b0a7aa3962a181198c1e649cf2fba57d2ae9a4f027f23f616ec"
       define_method(:install) do
         bin.install "stencil"
       end
