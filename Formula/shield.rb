@@ -5,23 +5,23 @@
 class Shield < Formula
   desc "Identity and authorization system"
   homepage "https://github.com/goto/shield"
-  version "0.7.8-alpha-05"
+  version "0.7.9"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/goto/shield/releases/download/v0.7.8-alpha-05/shield_Darwin_x86_64.tar.gz"
-      sha256 "06494164fdbce28a399e5ca2a51c3d96bc3bd5e69a14e0c28ef1c4e55c430b13"
+      url "https://github.com/goto/shield/releases/download/v0.7.9/shield_Darwin_x86_64.tar.gz"
+      sha256 "098092fdbc1ee417b8e6f99b6d643ba338404aea1f1562bc83fd849be42554f9"
 
       def install
         bin.install "shield"
       end
     end
     on_arm do
-      url "https://github.com/goto/shield/releases/download/v0.7.8-alpha-05/shield_Darwin_arm64.tar.gz"
-      sha256 "249aa08c0b7ec484b87b9e2f677f6970d3ee2cb761d6b18232efb3e60d3eea60"
+      url "https://github.com/goto/shield/releases/download/v0.7.9/shield_Darwin_arm64.tar.gz"
+      sha256 "6124d2a44ab98f0f968006f4937a1632f8119c569dab4c472f62d146736db323"
 
       def install
         bin.install "shield"
@@ -32,8 +32,8 @@ class Shield < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goto/shield/releases/download/v0.7.8-alpha-05/shield_Linux_x86_64.tar.gz"
-        sha256 "04eb4068f05a7f8fc5919540ab6c07e280c9554bdf2822f031a306c59e5d6cec"
+        url "https://github.com/goto/shield/releases/download/v0.7.9/shield_Linux_x86_64.tar.gz"
+        sha256 "82bba5c32bf29adea021ed0161b250901dbcaa9c0f09439e6ed61337e7d6ce64"
 
         def install
           bin.install "shield"
@@ -42,8 +42,8 @@ class Shield < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/goto/shield/releases/download/v0.7.8-alpha-05/shield_Linux_arm.tar.gz"
-        sha256 "3e5b33add5386c6d67267a7e1bb8fe9be7e6d0461d6f790a921de40c36fe0d5f"
+        url "https://github.com/goto/shield/releases/download/v0.7.9/shield_Linux_arm.tar.gz"
+        sha256 "36af5a9c74a91c10965a8a6c8436133756966ee538cdeb940bfc0c4b55c36f51"
 
         def install
           bin.install "shield"
@@ -52,8 +52,8 @@ class Shield < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goto/shield/releases/download/v0.7.8-alpha-05/shield_Linux_arm64.tar.gz"
-        sha256 "269f815c89416b1f2ae927096286dc4e93abe7445dc982aea3481660572fca27"
+        url "https://github.com/goto/shield/releases/download/v0.7.9/shield_Linux_arm64.tar.gz"
+        sha256 "56028c242028c4e5168f670fe537982178badd260b5d762c5f077beb228adcc8"
 
         def install
           bin.install "shield"
