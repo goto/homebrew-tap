@@ -5,23 +5,23 @@
 class Entropy < Formula
   desc "Infrastructure orchestration tool."
   homepage "https://github.com/goto/entropy"
-  version "0.3.19-rc2"
+  version "0.3.19"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/goto/entropy/releases/download/v0.3.19-rc2/entropy_0.3.19-rc2_macos_arm64.tar.gz"
-      sha256 "5bf0f4eb52cc3b60f7250c0bacaf97e680172736afa09d7df91373082bd73d37"
+      url "https://github.com/goto/entropy/releases/download/v0.3.19/entropy_0.3.19_macos_arm64.tar.gz"
+      sha256 "7c5b12c60444bbb599585c8a71eded73de4a032f3b72544bbdc13ef3a05148cc"
 
       def install
         bin.install "entropy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.3.19-rc2/entropy_0.3.19-rc2_macos_x86_64.tar.gz"
-      sha256 "e8ebbcc074d4f64ffb64a86cc44da3299a9c059e095f8e2f79b88fb658da09a8"
+      url "https://github.com/goto/entropy/releases/download/v0.3.19/entropy_0.3.19_macos_x86_64.tar.gz"
+      sha256 "3e4a3a760f055d11b58184fc2d965add988cab8d65543b3679d7d65731c19c76"
 
       def install
         bin.install "entropy"
@@ -31,16 +31,16 @@ class Entropy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/entropy/releases/download/v0.3.19-rc2/entropy_0.3.19-rc2_linux_arm64.tar.gz"
-      sha256 "770288c02d8d14cd32231829403b4358cb7f36c7211d9403e59e3b80354ab3e1"
+      url "https://github.com/goto/entropy/releases/download/v0.3.19/entropy_0.3.19_linux_arm64.tar.gz"
+      sha256 "4bf6e2187b5b06fdbe3d7790fbba580d49465fc2f4a36f782e130462d4e223fd"
 
       def install
         bin.install "entropy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.3.19-rc2/entropy_0.3.19-rc2_linux_x86_64.tar.gz"
-      sha256 "1904a4052c39527faa7cc49dd2394c274a24f0f101db5d48f56e3f9e83c4d131"
+      url "https://github.com/goto/entropy/releases/download/v0.3.19/entropy_0.3.19_linux_x86_64.tar.gz"
+      sha256 "0f33bdcd5829ee42156b168a7546e08baad8a0df9e5371d6f7bd67c029d424c7"
 
       def install
         bin.install "entropy"
