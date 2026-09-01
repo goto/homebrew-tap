@@ -5,23 +5,23 @@
 class Entropy < Formula
   desc "Infrastructure orchestration tool."
   homepage "https://github.com/goto/entropy"
-  version "0.3.24"
+  version "0.3.25"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/goto/entropy/releases/download/v0.3.24/entropy_0.3.24_macos_arm64.tar.gz"
-      sha256 "53b3a2eb3a1126aa83d8973a30ba7bab4ad3d8bbfec325debc6b5f53571dc250"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/entropy/releases/download/v0.3.25/entropy_0.3.25_macos_x86_64.tar.gz"
+      sha256 "386f4c00659d6bb9d081f03e52ffd8eb5b534c6275fdf46d72497b0f4cf3ab3f"
 
       def install
         bin.install "entropy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.3.24/entropy_0.3.24_macos_x86_64.tar.gz"
-      sha256 "8f6372809158d3ca7688ef1f3c8e2e6b357e9590a0cd549b1cdefa604197d707"
+    if Hardware::CPU.arm?
+      url "https://github.com/goto/entropy/releases/download/v0.3.25/entropy_0.3.25_macos_arm64.tar.gz"
+      sha256 "53b57d3058481a2e38e05e8a05b69d25c3b0b0634675b71bb82e029228f7b6b7"
 
       def install
         bin.install "entropy"
@@ -30,17 +30,17 @@ class Entropy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/entropy/releases/download/v0.3.24/entropy_0.3.24_linux_arm64.tar.gz"
-      sha256 "2a5dbf8145bee7ccb8cd6b3416c778afce0edd80452cc3e048189b05744c4c14"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/entropy/releases/download/v0.3.25/entropy_0.3.25_linux_x86_64.tar.gz"
+      sha256 "b99662d76e2877c944a4f60ac427f05a2fe5e2679f6a866437176825441a9275"
 
       def install
         bin.install "entropy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.3.24/entropy_0.3.24_linux_x86_64.tar.gz"
-      sha256 "94005bfc548733d6fd8200e3a02bc21033808861aaf94328f0ca7dcb80c20b0f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goto/entropy/releases/download/v0.3.25/entropy_0.3.25_linux_arm64.tar.gz"
+      sha256 "7cad3f8f9ca42ce7c0b25082fc3e6e3ffee7a725e2fed31f5d87791e0ecdf8d2"
 
       def install
         bin.install "entropy"
