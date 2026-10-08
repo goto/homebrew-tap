@@ -5,23 +5,23 @@
 class Compass < Formula
   desc "Metadata Discovery and Lineage Service"
   homepage "https://github.com/goto/compass"
-  version "0.10.4"
+  version "0.10.5"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/goto/compass/releases/download/v0.10.4/compass_Darwin_x86_64.tar.gz"
-      sha256 "6b2c5e82ecf79c60156e2b6fdb06259eec54699c945783f8b30a492a27f736fb"
+      url "https://github.com/goto/compass/releases/download/v0.10.5/compass_Darwin_x86_64.tar.gz"
+      sha256 "7d9e90642ad2ee89ee9ed5ed815ceabbbd246828a616408de700172d8eb56e79"
 
       def install
         bin.install "compass"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/goto/compass/releases/download/v0.10.4/compass_Darwin_arm64.tar.gz"
-      sha256 "11b8b504f59d7c9cce34f308910646f785d823bfb30957bf65f8d07485ec9e0a"
+      url "https://github.com/goto/compass/releases/download/v0.10.5/compass_Darwin_arm64.tar.gz"
+      sha256 "3beb5075d02e52ead1b3b4eaa28bbe6f7e4f1d0db13e44dfb6e31b53a06ce743"
 
       def install
         bin.install "compass"
@@ -31,16 +31,16 @@ class Compass < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/goto/compass/releases/download/v0.10.4/compass_Linux_x86_64.tar.gz"
-      sha256 "45dcbe34f78640e47c3b40bf6ca0dd01e4a1a189bcf4e1f036164dba006a6103"
+      url "https://github.com/goto/compass/releases/download/v0.10.5/compass_Linux_x86_64.tar.gz"
+      sha256 "908af9a987bc1f8d90b701f138f04fdba68f788dea2f17b32c540f16ea8cb2c9"
 
       def install
         bin.install "compass"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/compass/releases/download/v0.10.4/compass_Linux_arm64.tar.gz"
-      sha256 "f59be9d5dc94047f313b876152da289139524a42d9d521e6cf5a4d472e08962b"
+      url "https://github.com/goto/compass/releases/download/v0.10.5/compass_Linux_arm64.tar.gz"
+      sha256 "cb2f4fbbf8e55b1224d22c9d5bc0204723ce06ce26418bd60d50a092c6999a89"
 
       def install
         bin.install "compass"
