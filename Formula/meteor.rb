@@ -5,23 +5,23 @@
 class Meteor < Formula
   desc "Metadata collection tool."
   homepage "https://github.com/goto/meteor"
-  version "0.12.0"
+  version "0.12.1"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/goto/meteor/releases/download/v0.12.0/meteor_Darwin_x86_64.tar.gz"
-      sha256 "224f915b1365fe489debd1953e78b947547d70e9a7144492861923d1caf3e071"
+      url "https://github.com/goto/meteor/releases/download/v0.12.1/meteor_Darwin_x86_64.tar.gz"
+      sha256 "833aae8d10bf6c12bff99fb683208860b0da177a366132616f42411d256a82f0"
 
       def install
         bin.install "meteor"
       end
     end
     on_arm do
-      url "https://github.com/goto/meteor/releases/download/v0.12.0/meteor_Darwin_arm64.tar.gz"
-      sha256 "4fba271f6d94550524ef8cd3c6d0509935a92eba887e0aa8f8ef537a41dfcfa4"
+      url "https://github.com/goto/meteor/releases/download/v0.12.1/meteor_Darwin_arm64.tar.gz"
+      sha256 "e6429b2dd92d35e37667a97954d319fecbe0f84b369ce98afd93a1e114970e37"
 
       def install
         bin.install "meteor"
@@ -32,8 +32,8 @@ class Meteor < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goto/meteor/releases/download/v0.12.0/meteor_Linux_x86_64.tar.gz"
-        sha256 "f6e768fa816d9f81c355ba6fef50cac40dfe8349c7cbbd24f613437057d67504"
+        url "https://github.com/goto/meteor/releases/download/v0.12.1/meteor_Linux_x86_64.tar.gz"
+        sha256 "bcdc5160bb8cca07d3a756889747e0ea36ad6b9fc47057d3671639c93cfd8b63"
 
         def install
           bin.install "meteor"
@@ -42,8 +42,8 @@ class Meteor < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goto/meteor/releases/download/v0.12.0/meteor_Linux_arm64.tar.gz"
-        sha256 "109a0dfca67c934e0f22d42064b33e78f87f1c26b670ad37d530abd5d0ad0a9a"
+        url "https://github.com/goto/meteor/releases/download/v0.12.1/meteor_Linux_arm64.tar.gz"
+        sha256 "706a317362a8fb2cf3e6122f9685dce19fa724acae7be4a9f2c51188ef1edd37"
 
         def install
           bin.install "meteor"
