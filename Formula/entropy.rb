@@ -5,23 +5,23 @@
 class Entropy < Formula
   desc "Infrastructure orchestration tool."
   homepage "https://github.com/goto/entropy"
-  version "0.3.33-rc7"
+  version "0.3.33-rc8"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/goto/entropy/releases/download/v0.3.33-rc7/entropy_0.3.33-rc7_macos_arm64.tar.gz"
-      sha256 "abe646156d691a37dd533e7a4fab63cdd00bfaccf21171c37004b1a19a581188"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/entropy/releases/download/v0.3.33-rc8/entropy_0.3.33-rc8_macos_x86_64.tar.gz"
+      sha256 "5b5afbb4a9f90c2e301b37a77eb53f122e4145c0229a2ac558d051f837902913"
 
       def install
         bin.install "entropy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.3.33-rc7/entropy_0.3.33-rc7_macos_x86_64.tar.gz"
-      sha256 "77732fa695b2a9c5b73028dead64c89661b8a083b649d10ec4839d2f1bdd2968"
+    if Hardware::CPU.arm?
+      url "https://github.com/goto/entropy/releases/download/v0.3.33-rc8/entropy_0.3.33-rc8_macos_arm64.tar.gz"
+      sha256 "acaa0c4beb852786ca6b65a24a6297fe510385db661b9039b3303c6e3f76b249"
 
       def install
         bin.install "entropy"
@@ -30,17 +30,17 @@ class Entropy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goto/entropy/releases/download/v0.3.33-rc7/entropy_0.3.33-rc7_linux_arm64.tar.gz"
-      sha256 "6b6ce0fed28a166e4d0a443391c5890ead47aaa553df03406e4026c0fa112e31"
+    if Hardware::CPU.intel?
+      url "https://github.com/goto/entropy/releases/download/v0.3.33-rc8/entropy_0.3.33-rc8_linux_x86_64.tar.gz"
+      sha256 "1204337a572090315108982a3ffc81e133116e5a8908b9ab9a0f111bef05fcac"
 
       def install
         bin.install "entropy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goto/entropy/releases/download/v0.3.33-rc7/entropy_0.3.33-rc7_linux_x86_64.tar.gz"
-      sha256 "f497bad76d19923e409b5381fb134c4b6ee7fb34ba2acda0e00c55447b1b8366"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goto/entropy/releases/download/v0.3.33-rc8/entropy_0.3.33-rc8_linux_arm64.tar.gz"
+      sha256 "86c558c93a428f04f9494558e84016a6d0b4e07447ae5acfd595f6252e089fd4"
 
       def install
         bin.install "entropy"
